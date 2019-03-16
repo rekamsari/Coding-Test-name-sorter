@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Name Sorter</p>
+
+<table id="example">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th><button>Order Last Name</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Orson Milka</td>
+            <td>Iddins</td>
+        </tr>
+        <tr>
+            <td>Erna Dorey</td>
+            <td>Battelle</td>
+        </tr>
+        <tr>
+            <td>Flori Chaunce</td>
+            <td>Franzel</td>
+        </tr>
+        <tr>
+            <td>Odetta Sue</td>
+            <td>Kaspar</td>
+        </tr>
+        <tr>
+            <td>Roy Ketti</td>
+            <td>Kopfen</td>
+        </tr>
+        <tr>
+            <td>Madel Bordie</td>
+            <td>Mapplebeck</td>
+        </tr>
+        <tr>
+            <td>Selle</td>
+            <td>Bellison</td>
+        </tr>
+        <tr>
+            <td>Leonerd Adda Mitchell </td>
+            <td>Monaghan</td>
+        </tr>
+        <tr>
+            <td>Debra</td>
+            <td>Micheli</td>
+        </tr>
+        <tr>
+            <td>Hailey Avie</td>
+            <td>Annakin</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable(
+            {   
+                "bPaginate": false,
+                "bLengthChange": false,
+                "bFilter": false,
+                "bInfo": false,
+                "bAutoWidth": false,
+                searching : false,
+                "columnDefs": [ {
+                    "targets": 0,
+                    "orderable": false
+                } ]
+            }
+        );
+    } );
+</script>
+</body>
+</html>
+
